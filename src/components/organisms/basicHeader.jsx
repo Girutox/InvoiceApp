@@ -1,9 +1,11 @@
 import Logo from '../atoms/logo';
 import Heading1 from '../atoms/heading1';
 
+import styles from './basicHeader.module.css';
+
 const BasicHeader = () => {
   return (
-    <header className='header-container'>
+    <header className={styles.container}>
       <Logo />
       <Heading1 value="Design Systems"/>
     </header>
