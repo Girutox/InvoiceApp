@@ -1,11 +1,11 @@
-import logo from '../../assets/logo.svg';
+import {ReactComponent as LogoSVG} from "../../assets/logo.svg";
 
-const Logo = () => {
+const Logo = (props) => {
   return (
     <>
-    <img src={logo} alt="" />
+      <LogoSVG fill={props.fill} />
     </>
-  )
-}
+  );
+};
 
 export default Logo;
