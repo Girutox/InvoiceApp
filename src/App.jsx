@@ -1,10 +1,11 @@
-import './App.css';
+import styles from './App.module.css';
+
+import BasicHeader from './components/organisms/basicHeader';
 
 function App() {
   return (
-    <div className="app-container">
-      <header>
-      </header>
+    <div className={styles.appContainer}>
+      <BasicHeader />
       <main>
 
       </main>
