@@ -6,7 +6,7 @@ import styles from "./basicHeader.module.scss";
 const BasicHeader = () => {
   return (
     <header className={styles.container}>
-      <Logo fill={"purple"} />
+      <Logo className="svg-primary" />
       <Heading1 value="Design Systems" />
     </header>
   );

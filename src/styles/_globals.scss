@@ -1,0 +1,5 @@
+@use 'variables';
+
+.svg-primary {
+  fill: variables.$primary;
+}
