@@ -3,9 +3,9 @@ import styles from "./heading2.module.scss";
 const Heading2 = (props) => {
   return (
     <>
-      <h1 className={styles.heading2}>
+      <h2 className={styles.heading2}>
         {props.children}
-      </h1>
+      </h2>
     </>
   );
 };

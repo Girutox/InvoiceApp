@@ -1,15 +1,42 @@
-@use 'styles/variables';
+@use "styles/variables";
 
 body {
-  font-family: 'Spartan Medium', sans-serif;
+  font-family: "Spartan Medium", sans-serif;
+  padding: 4.5rem 6rem;
 }
 
-.app-container {
-  background-color: lightgrey;
+.fill {
+  &-primary {
+    fill: variables.$primary;
+  }
 }
 
-.svg-primary {
-  fill: variables.$primary;
+.bgc {
+  &-primary {
+    background-color: variables.$primary;
+  }
+
+  &-primary-2 {
+    background-color: variables.$primary-2;
+  }
+
+  &-primary-3 {
+    background-color: variables.$primary-3;
+  }
+
+  &-primary-4 {
+    background-color: variables.$primary-4;
+  }
+}
+
+.color {
+  &-primary {
+    color: variables.$primary;
+  }
+
+  &-secondary-4 {
+    color: variables.$secondary-4;
+  }
 }
 
 @font-face {
@@ -20,6 +47,5 @@ body {
 
 @font-face {
   font-family: "Spartan Bold";
-  src: local("Spartan-Bold"),
-    url("./fonts/Spartan-Bold.ttf") format("truetype");
+  src: local("Spartan-Bold"), url("./fonts/Spartan-Bold.ttf") format("truetype");
 }
