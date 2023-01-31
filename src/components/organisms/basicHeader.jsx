@@ -1,7 +1,7 @@
 import Logo from "../atoms/logo";
 import Heading1 from "../atoms/heading1";
 
-import styles from "./basicHeader.module.css";
+import styles from "./basicHeader.module.scss";
 
 const BasicHeader = () => {
   return (
