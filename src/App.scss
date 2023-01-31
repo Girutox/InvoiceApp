@@ -1,0 +1,32 @@
+@use 'styles/variables';
+
+.app-container {
+  background-color: lightgrey;
+}
+
+.svg-primary {
+  fill: variables.$primary;
+}
+
+.text {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  font-family: 'Spartan Bold', sans-serif;
+
+  &-primary {
+    color: variables.$secondary-4;
+  }
+}
+
+@font-face {
+  font-family: "Spartan Medium";
+  src: local("Spartan-Medium"),
+    url("./fonts/Spartan-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Spartan Bold";
+  src: local("Spartan-Bold"),
+    url("./fonts/Spartan-Bold.ttf") format("truetype");
+}
