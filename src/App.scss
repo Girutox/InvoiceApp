@@ -1,22 +1,15 @@
 @use 'styles/variables';
 
+body {
+  font-family: 'Spartan Medium', sans-serif;
+}
+
 .app-container {
   background-color: lightgrey;
 }
 
 .svg-primary {
   fill: variables.$primary;
-}
-
-.text {
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: -1px;
-  font-family: 'Spartan Bold', sans-serif;
-
-  &-primary {
-    color: variables.$secondary-4;
-  }
 }
 
 @font-face {

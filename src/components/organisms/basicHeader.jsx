@@ -1,5 +1,5 @@
 import Logo from "../atoms/logo";
-import Heading1 from "../atoms/heading1";
+import Heading1 from "../atoms/headings/heading1";
 
 import styles from "./basicHeader.module.scss";
 
