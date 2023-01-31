@@ -7,7 +7,7 @@ const BasicHeader = () => {
   return (
     <header className={styles.container}>
       <Logo className="svg-primary" />
-      <Heading1 value="Design Systems" />
+      <Heading1 className="text text-primary" value="Design System" />
     </header>
   );
 };

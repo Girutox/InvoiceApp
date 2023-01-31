@@ -1,7 +1,7 @@
 const Heading1 = (props) => {
   return (
     <>
-    <h1>{props.value}</h1>
+    <h1 className={props.className}>{props.value}</h1>
     </>
   );
 }
