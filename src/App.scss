@@ -30,8 +30,24 @@ body {
 }
 
 .color {
+  &-white {
+    color: #FFF;
+  }
+
   &-primary {
     color: variables.$primary;
+  }
+
+  &-secondary {
+    color: variables.$secondary;
+  }
+
+  &-secondary-2 {
+    color: variables.$secondary-2;
+  }
+
+  &-secondary-3 {
+    color: variables.$secondary-3;
   }
 
   &-secondary-4 {

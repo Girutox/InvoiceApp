@@ -1,0 +1,10 @@
+@import '../../../styles/mixins';
+
+.container {
+  @include horizontal-flex-center;
+
+  h3 {
+    flex-grow: 1;
+    text-align: left;
+  }
+}

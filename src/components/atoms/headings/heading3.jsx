@@ -1,6 +1,6 @@
-import styles from "./heading2.module.scss";
+import styles from "./heading3.module.scss";
 
-const Heading2 = (props) => {
+const Heading3 = (props) => {
   return (
     <>
       <h2 className={`${styles.heading} ${props.className}`}>
@@ -10,4 +10,4 @@ const Heading2 = (props) => {
   );
 };
 
-export default Heading2;
+export default Heading3;

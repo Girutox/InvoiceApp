@@ -6,3 +6,5 @@
 * "ReactComponent" for SVG files
 
 * @font-face
+
+* (?) Path aliases
