@@ -1,11 +1,6 @@
 @use '../../../styles/variables';
 
 .heading {
-  font-size: 11px;
   color: variables.$secondary-3;
-  line-height: 18px;
-  font-weight: 500;
-  letter-spacing: -0.229167px;
-  font-family: 'Spartan Medium';
   margin-bottom: 1rem;
 }

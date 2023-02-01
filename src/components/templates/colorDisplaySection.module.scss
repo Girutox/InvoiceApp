@@ -1,4 +1,6 @@
 .container {
+  margin-bottom: 6rem;
+
   .title {
     font-size: 28px;
     letter-spacing: -0.875px;
@@ -10,7 +12,5 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    // display: grid;
-    // grid-template-columns: auto auto auto auto;
   }
 }
