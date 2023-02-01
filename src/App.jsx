@@ -4,6 +4,7 @@ import "./fonts/Spartan-Bold.ttf";
 
 import BasicHeader from "./components/organisms/basicHeader";
 import ColorDisplaySection from "./components/templates/colorDisplaySection";
+import TypographySection from "./components/templates/typographySection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BasicHeader />
       <main>
         <ColorDisplaySection />
+        <TypographySection />
       </main>
     </div>
   );

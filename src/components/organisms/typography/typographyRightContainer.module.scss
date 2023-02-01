@@ -1,0 +1,11 @@
+@use '../../../styles/variables';
+
+.container > h3 {
+  font-size: 20px;
+  line-height: 39px;
+  letter-spacing: 8px;
+  margin-bottom: 4rem;
+  color: variables.$secondary-2;
+
+  max-width: 565px;
+}
