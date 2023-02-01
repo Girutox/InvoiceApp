@@ -7,7 +7,7 @@ const TypographyRightContainer = (props) => {
   return (
     <div className={styles.container}>
       <Heading3>
-        ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()
+        {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()"}
       </Heading3>
       <TypographyBodyDescriptor
         title="Body 1  |  Spartan Medium  |  12px  |  15px Line  |  -0,25 Spacing"

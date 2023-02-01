@@ -1,0 +1,9 @@
+@use '../../../styles/variables';
+
+.hoverHandler {
+
+}
+
+.hoverHandler:hover {
+  background-color: variables.$primary-2;
+}
