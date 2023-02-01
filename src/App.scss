@@ -98,6 +98,22 @@ body {
   &-secondary-4 {
     background-color: variables.$secondary-4;
   }
+
+  &-alert {
+    background-color: variables.$alert;
+  }
+
+  &-alert-2 {
+    background-color: variables.$alert-2;
+  }
+
+  &-background-light {
+    background-color: variables.$background-light;
+  }
+
+  &-alert-4 {
+    background-color: variables.$alert-4;
+  }
 }
 
 .color {
