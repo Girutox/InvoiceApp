@@ -82,6 +82,22 @@ body {
   &-primary-4 {
     background-color: variables.$primary-4;
   }
+
+  &-secondary {
+    background-color: variables.$secondary;
+  }
+
+  &-secondary-2 {
+    background-color: variables.$secondary-2;
+  }
+
+  &-secondary-3 {
+    background-color: variables.$secondary-3;
+  }
+
+  &-secondary-4 {
+    background-color: variables.$secondary-4;
+  }
 }
 
 .color {

@@ -2,9 +2,9 @@
 
 .container {
   @include horizontal-flex-center;
+  margin-top: 15px;
 
   h3 {
-    flex-grow: 1;
     text-align: left;
   }
 
