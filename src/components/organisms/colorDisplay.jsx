@@ -10,13 +10,8 @@ const ColorDisplay = (props) => {
         classNameLabel1={props.classNameLabel1}
         backgroundColor={props.backgroundColor}
         hexColorText={props.hexColorText}
-      ></ColorDisplayBox>
-      <ColorDisplayExtraInfo
-        classNameLabel2={props.classNameLabel2}
-        classNameLabel3={props.classNameLabel3}
-        colorType={props.colorType}
-        colorValue={props.colorValue}
-      ></ColorDisplayExtraInfo>
+      />
+      <ColorDisplayExtraInfo subData={props.subData}/>
     </div>
   );
 };

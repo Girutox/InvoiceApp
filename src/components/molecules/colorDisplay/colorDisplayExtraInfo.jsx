@@ -1,13 +1,24 @@
-import ColorDisplayLabel from '../../atoms/colorDisplay/colorDisplayLabel';
-import styles from './colorDisplayExtraInfo.module.scss';
+import ColorDisplayLabel from "../../atoms/colorDisplay/colorDisplayLabel";
+import styles from "./colorDisplayExtraInfo.module.scss";
 
 const ColorDisplayExtraInfo = (props) => {
   return (
-    <div className={styles.container}>
-      <ColorDisplayLabel className={props.classNameLabel2}>{props.colorType}</ColorDisplayLabel>
-      <ColorDisplayLabel className={props.classNameLabel3}>{props.colorValue}</ColorDisplayLabel>
-    </div>
+    <>
+      {props.subData &&
+        props.subData.map((item) => {
+          return (
+            <div key={item.id} className={styles.container}>
+              <ColorDisplayLabel key={`l1_${item.id}`} className={item.classNameLabel2}>
+                {item.colorType}
+              </ColorDisplayLabel>
+              <ColorDisplayLabel key={`l2_${item.id}`} className={item.classNameLabel3}>
+                {item.colorValue}
+              </ColorDisplayLabel>
+            </div>
+          );
+        })}
+    </>
   );
-}
- 
+};
+
 export default ColorDisplayExtraInfo;

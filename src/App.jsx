@@ -8,19 +8,45 @@ import ColorDisplayBox from "./components/molecules/colorDisplay/colorDisplayBox
 import ColorDisplay from "./components/organisms/colorDisplay";
 
 function App() {
+  const mainData = [
+    {
+      id: 1,
+      classNameLabel1: "color-white",
+      backgroundColor: "bgc-primary",
+      hexColorText: "#7C5DFA",
+      subData: [
+        {
+          id: 1,
+          classNameLabel2: "color-secondary-2",
+          colorType: "RGB",
+          colorValue: "124, 93, 250",
+        },
+        {
+          id: 2,
+          classNameLabel2: "color-secondary-2",
+          colorType: "HSL",
+          colorValue: "252°, 94%, 67%",
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="app-container">
       <BasicHeader />
       <main>
-        <ColorDisplay
-          classNameLabel1="color-white"
-          backgroundColor="bgc-primary"
-          hexColorText="#7C5DFA"
-          classNameLabel2="color-secondary-2"
-          classNameLabel3="color-secondary-4"
-          colorType="RGB"
-          colorValue="124, 93, 250"
-        ></ColorDisplay>
+        {mainData &&
+          mainData.map((item) => {
+            return (
+              <ColorDisplay
+                key={item.id}
+                classNameLabel1={item.classNameLabel1}
+                backgroundColor={item.backgroundColor}
+                hexColorText={item.hexColorText}
+                subData={item.subData}
+              />
+            );
+          })}
       </main>
     </div>
   );
