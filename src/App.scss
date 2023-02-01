@@ -57,7 +57,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Spartan Medium", sans-serif;
-  padding: 4.5rem 6rem;
+  padding: 4.5rem 10rem;
+}
+
+.logoResize {
+  transform: scale(2.2);
 }
 
 .fill {
