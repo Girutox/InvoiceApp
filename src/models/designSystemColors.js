@@ -202,7 +202,7 @@ export const mainData = [
   {
     id: 11,
     classNameLabel1: "color-secondary-2",
-    backgroundColor: "bgc-background-light",
+    backgroundColor: "bgc-background-light bgc-background-light__colorDisplay",
     hexColorText: "#F8F8FB (Light BG)",
     subData: [
       {

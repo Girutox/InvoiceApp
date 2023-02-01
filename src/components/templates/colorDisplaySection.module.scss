@@ -6,9 +6,7 @@
   }
 
   .subContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
   }
 }

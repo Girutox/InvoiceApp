@@ -113,6 +113,10 @@ body {
 
   &-background-light {
     background-color: variables.$background-light;
+
+    &__colorDisplay {
+      border: 1px solid variables.$secondary-2
+    }
   }
 
   &-alert-4 {
