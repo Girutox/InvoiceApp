@@ -1,0 +1,21 @@
+@use '../../styles/variables';
+
+.input {
+  height: 48px;
+  border: 1px solid variables.$secondary;
+  border-radius: 4px;
+  color: variables.$secondary-4;
+  padding-left: 1.3rem;
+  font-weight: 700;
+  caret-color: variables.$primary;
+}
+
+.includeActive {
+  outline: none;
+  border-color: variables.$primary-2;
+}
+
+.input:focus {
+  outline: none;
+  border-color: variables.$primary-2;
+}

@@ -6,6 +6,7 @@ import BasicHeader from "./components/organisms/basicHeader";
 import ColorDisplaySection from "./components/templates/colorDisplaySection";
 import TypographySection from "./components/templates/typographySection";
 import ButtonDisplaySection from "./components/templates/buttonDisplaySection";
+import FormElementsDisplaySection from "./components/templates/formElementsDisplaySection";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ColorDisplaySection />
         <TypographySection />
         <ButtonDisplaySection />
+        <FormElementsDisplaySection />
       </main>
     </div>
   );
