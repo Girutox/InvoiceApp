@@ -1,0 +1,9 @@
+@use '../../../styles/variables';
+
+.applyHover {
+  background-color: variables.$alert-2;
+}
+
+.hoverHandler:hover {
+  background-color: variables.$alert-2;
+}

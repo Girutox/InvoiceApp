@@ -1,8 +1,8 @@
 import ButtonLayout from "../../molecules/buttonLayout";
 
-import styles from './button3Default.module.scss'
+import styles from './button4Default.module.scss'
 
-const Button3Default = (props) => {
+const Button4Default = (props) => {
   const applyHover = (props.applyHover) ? props.applyHover : "";
   
   return (
@@ -10,13 +10,13 @@ const Button3Default = (props) => {
       <ButtonLayout
           classNameButton={`${styles.hoverHandler} ${
             applyHover ? styles.applyHover : ""
-          } bgc-unknown-1`}
+          } bgc-unknown-2`}
           includeSign={false}
-          classNameSpan="body1 text-bold color-secondary-3"
+          classNameSpan="body1 text-bold color-secondary-2"
           spanText={props.spanText}
         />
     </div>
   );
 }
  
-export default Button3Default;
+export default Button4Default;
