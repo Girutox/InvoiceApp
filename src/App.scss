@@ -74,6 +74,8 @@ h6 {
 body {
   font-family: "Spartan Medium", sans-serif;
   padding: 4.5rem 10rem;
+
+  background-color: variables.$background-light;
 }
 
 .body1 {
@@ -86,10 +88,6 @@ body {
   color: variables.$secondary-4;
 }
 
-.text-bold {
-  font-weight: 700;
-}
-
 .body2 {
   font-weight: 500;
   font-size: 12px;
@@ -98,6 +96,10 @@ body {
   letter-spacing: -0.25px;
 
   color: variables.$secondary-4;
+}
+
+.text-bold {
+  font-weight: 700;
 }
 
 .logoResize {
@@ -168,11 +170,31 @@ body {
   }
 
   &-unknown-1 {
-    background-color: #F9FAFE;
+    background-color: #f9fafe;
   }
 
   &-unknown-2 {
-    background-color: #373B53;
+    background-color: rgb(55, 59, 83);
+
+    &__opacity {
+      background-color: rgb(55, 59, 83, 0.06);
+    }
+  }
+
+  &-unknown-3 {
+    background-color: rgb(51, 214, 159);
+
+    &__opacity {
+      background-color: rgb(51, 214, 159, 0.06);
+    }
+  }
+
+  &-unknown-4 {
+    background-color: rgb(255, 143, 0);
+
+    &__opacity {
+      background-color: rgb(255, 143, 0, 0.06);
+    }
   }
 }
 
@@ -199,6 +221,30 @@ body {
 
   &-secondary-4 {
     color: variables.$secondary-4;
+  }
+
+  &-unknown-2 {
+    color: rgb(55, 59, 83);
+
+    &__opacity {
+      color: rgb(55, 59, 83, 0.06);
+    }
+  }
+
+  &-unknown-3 {
+    color: rgb(51, 214, 159);
+
+    &__opacity {
+      color: rgb(51, 214, 159, 0.5);
+    }
+  }
+
+  &-unknown-4 {
+    color: rgb(255, 143, 0);
+
+    &__opacity {
+      color: rgb(255, 143, 0.06);
+    }
   }
 }
 

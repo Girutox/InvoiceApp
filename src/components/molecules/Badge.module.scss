@@ -1,0 +1,9 @@
+.subContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subContainer > div {
+  margin-right: 8px;
+}

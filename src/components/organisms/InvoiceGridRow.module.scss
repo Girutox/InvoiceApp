@@ -1,0 +1,37 @@
+@use "../../styles/variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 8px;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+
+  padding: 1rem 2.5rem;
+}
+
+.container > span:nth-of-type(1)::before {
+  content: "#";
+  color: variables.$secondary-3;
+}
+
+.container > span:nth-of-type(4) {
+  font-size: 16px;
+
+  &::before {
+    content: "S/. ";
+  }
+}
+
+.container > span:last-child {
+  border-top: 2.5px solid variables.$primary;
+  border-right: 2.5px solid variables.$primary;
+
+  min-width: 8px;
+  min-height: 8px;
+
+  transform: rotate(45deg);
+
+  cursor: pointer;
+}
