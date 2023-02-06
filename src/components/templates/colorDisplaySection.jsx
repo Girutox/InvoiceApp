@@ -11,8 +11,7 @@ const ColorDisplaySection = (props) => {
         Colors
       </Heading2>
       <div className={styles.subContainer}>
-        {mainData &&
-          mainData.map((item) => {
+        {mainData?.map((item) => {
             return (
               <ColorDisplay
                 key={item.id}
