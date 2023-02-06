@@ -1,14 +1,22 @@
 @use "../../styles/variables";
 
 .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  justify-content: space-around;
   align-items: center;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr auto auto;
+  grid-gap: 40px;
 
   border-radius: 8px;
   box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
 
   padding: 1rem 2.5rem;
+
+  margin-bottom: 1.2rem;
+}
+
+.container > span {
+  text-align: left;
 }
 
 .container > span:nth-of-type(1)::before {
@@ -18,9 +26,10 @@
 
 .container > span:nth-of-type(4) {
   font-size: 16px;
+  text-align: right;
 
   &::before {
-    content: "S/. ";
+    content: "$";
   }
 }
 
