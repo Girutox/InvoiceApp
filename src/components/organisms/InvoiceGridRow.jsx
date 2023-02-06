@@ -1,24 +1,12 @@
 import SpanCustom from "../atoms/spanCustom";
 import Badge from "../molecules/Badge";
+import {months} from '../../models/months';
 
 import styles from "./InvoiceGridRow.module.scss";
 
 const InvoiceGridRow = (props) => {
   const { id, code, dueDate, user, value, statusId } = props.data;
-  const months = {
-    0: "January",
-    1: "February",
-    2: "March",
-    3: "April",
-    4: "May",
-    5: "June",
-    6: "July",
-    7: "August",
-    8: "September",
-    9: "October",
-    10: "November",
-    11: "December",
-  };
+  
 
   return (
     <div key={id} className={`${styles.container} bgc-white`}>
@@ -29,8 +17,7 @@ const InvoiceGridRow = (props) => {
         {code}
       </SpanCustom>
       <SpanCustom key={`sp2${id}`} className="body2 color-secondary-2">
-        Due{" "}
-        {`${dueDate.getDate()} ${months[dueDate.getMonth()].substring(
+        {`Due ${dueDate.getDate()} ${months[dueDate.getMonth()].substring(
           0,
           3
         )} ${dueDate.getFullYear()}`}
@@ -42,7 +29,7 @@ const InvoiceGridRow = (props) => {
         key={`sp4${id}`}
         className="body2 color-secondary-4 text-bold"
       >
-        {value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        {`$${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
       </SpanCustom>
       {statusId === 1 && (
         <Badge

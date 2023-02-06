@@ -2,7 +2,7 @@ import ColorDisplay from "../colorDisplay";
 import { render, screen } from "@testing-library/react";
 
 describe("Color Organism", () => {
-  it("should render #7C5DFA", () => {
+  it("should render the color display component correctly", () => {
     // AAA
     // arrange
     const subData = [
