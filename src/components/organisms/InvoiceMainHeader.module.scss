@@ -1,0 +1,35 @@
+@use '../../styles/variables';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 5rem;
+}
+
+.filterGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.filterGroup > span:nth-of-type(2){
+  border-top: 2.5px solid variables.$primary;
+  border-right: 2.5px solid variables.$primary;
+
+  min-width: 8px;
+  min-height: 8px;
+
+  transform: rotate(135deg);
+
+  margin-left: 0.8rem;
+
+  cursor: pointer;
+}
+
+.titleSubTitleContainer {
+  flex-grow: 1;
+}
