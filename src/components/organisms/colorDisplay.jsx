@@ -1,7 +1,7 @@
-import ColorDisplayBox from "../molecules/colorDisplay/colorDisplayBox";
-import ColorDisplayExtraInfo from "../molecules/colorDisplay/colorDisplayExtraInfo";
+import ColorDisplayBox from '../molecules/colorDisplay/colorDisplayBox';
+import ColorDisplayExtraInfo from '../molecules/colorDisplay/colorDisplayExtraInfo';
 
-import styles from "./colorDisplay.module.scss";
+import styles from './colorDisplay.module.scss';
 
 const ColorDisplay = (props) => {
   return (
@@ -11,7 +11,7 @@ const ColorDisplay = (props) => {
         backgroundColor={props.backgroundColor}
         hexColorText={props.hexColorText}
       />
-      <ColorDisplayExtraInfo subData={props.subData}/>
+      <ColorDisplayExtraInfo subData={props.subData} />
     </div>
   );
 };

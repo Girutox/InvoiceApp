@@ -1,35 +1,25 @@
-import SpanCustom from "../atoms/spanCustom";
-import Badge from "../molecules/Badge";
-import {months} from '../../models/months';
+import SpanCustom from '../atoms/spanCustom';
+import Badge from '../molecules/Badge';
+import { formatDateToString, getCurrencyNumber } from '../../utils/utils';
 
-import styles from "./InvoiceGridRow.module.scss";
+import styles from './InvoiceGridRow.module.scss';
 
 const InvoiceGridRow = (props) => {
   const { id, code, dueDate, user, value, statusId } = props.data;
-  
 
   return (
     <div key={id} className={`${styles.container} bgc-white`}>
-      <SpanCustom
-        key={`sp1${id}`}
-        className="body2 color-secondary-4 text-bold"
-      >
+      <SpanCustom key={`sp1${id}`} className="body2 color-secondary-4 text-bold">
         {code}
       </SpanCustom>
       <SpanCustom key={`sp2${id}`} className="body2 color-secondary-2">
-        {`Due ${dueDate.getDate()} ${months[dueDate.getMonth()].substring(
-          0,
-          3
-        )} ${dueDate.getFullYear()}`}
+        {formatDateToString('Due', dueDate)}
       </SpanCustom>
       <SpanCustom key={`sp3${id}`} className="body2 color-secondary-2">
         {user}
       </SpanCustom>
-      <SpanCustom
-        key={`sp4${id}`}
-        className="body2 color-secondary-4 text-bold"
-      >
-        {`$${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
+      <SpanCustom key={`sp4${id}`} className="body2 color-secondary-4 text-bold">
+        {getCurrencyNumber('$', value)}
       </SpanCustom>
       {statusId === 1 && (
         <Badge

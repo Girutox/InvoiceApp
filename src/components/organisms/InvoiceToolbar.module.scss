@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #fff;
+  height: 88px;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+
+  padding: 0 30px 0 30px;
+}
+
+.infoGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.infoGroup > span:nth-of-type(1) {
+  margin-right: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buttonGroup button {
+  margin-right: 10px;
+}

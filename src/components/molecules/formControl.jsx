@@ -1,7 +1,7 @@
-import InputControl from "../atoms/inputControl";
-import LabelCustom from "../atoms/labelCustom";
+import InputControl from '../atoms/inputControl';
+import LabelCustom from '../atoms/labelCustom';
 
-import styles from "./formControl.module.scss";
+import styles from './formControl.module.scss';
 
 const FormControl = (props) => {
   return (

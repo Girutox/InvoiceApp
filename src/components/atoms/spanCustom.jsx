@@ -1,7 +1,5 @@
 const SpanCustom = (props) => {
-  return (
-    <span className={props.className}>{props.children}</span>
-  );
-}
- 
+  return <span className={props.className}>{props.children}</span>;
+};
+
 export default SpanCustom;

@@ -7,15 +7,13 @@ import styles from './typographySection.module.scss';
 const TypographySection = (props) => {
   return (
     <section className={styles.container}>
-      <Heading2 className={`${styles.title} color-secondary-3`}>
-        Typography
-      </Heading2>
+      <Heading2 className={`${styles.title} color-secondary-3`}>Typography</Heading2>
       <div className={styles.subContainer}>
         <TypographyLeftContainer />
         <TypographyRightContainer />
       </div>
     </section>
   );
-}
- 
+};
+
 export default TypographySection;

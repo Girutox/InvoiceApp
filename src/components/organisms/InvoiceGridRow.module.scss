@@ -1,4 +1,4 @@
-@use "../../styles/variables";
+@use '../../styles/variables';
 
 .container {
   display: grid;
@@ -22,7 +22,7 @@
 }
 
 .container > span:nth-of-type(1)::before {
-  content: "#";
+  content: '#';
   color: variables.$secondary-3;
 }
 

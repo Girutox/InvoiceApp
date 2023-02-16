@@ -1,4 +1,4 @@
-import InvoicesGridSection from "../components/templates/InvoicesGridSection";
+import InvoicesGridSection from '../components/templates/InvoicesGridSection';
 
 import styles from './InvoiceMain.module.scss';
 
@@ -10,6 +10,6 @@ const InvoiceMain = (props) => {
       </main>
     </>
   );
-}
- 
+};
+
 export default InvoiceMain;

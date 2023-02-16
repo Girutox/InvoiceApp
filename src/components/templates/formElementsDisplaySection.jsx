@@ -1,23 +1,21 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import Heading2 from "../atoms/headings/heading2";
-import ControlDisplay from "../../components/organisms/controlDisplay";
-import InputControl from "../../components/atoms/inputControl";
-import { Select, DateInput } from "grommet";
+import Heading2 from '../atoms/headings/heading2';
+import ControlDisplay from '../../components/organisms/controlDisplay';
+import InputControl from '../../components/atoms/inputControl';
+import { Select, DateInput } from 'grommet';
 
-import styles from "./formElementsDisplaySection.module.scss";
+import styles from './formElementsDisplaySection.module.scss';
 
 const FormElementsDisplaySection = (props) => {
-  const [value, setValue] = useState("Net 30 Day");
-  const options = ["Net 1 Day", "Net 7 Day", "Net 14 Day", "Net 30 Day"];
+  const [value, setValue] = useState('Net 30 Day');
+  const options = ['Net 1 Day', 'Net 7 Day', 'Net 14 Day', 'Net 30 Day'];
 
   return (
     <section className={styles.container}>
-      <Heading2 className={`${styles.title} color-secondary-3`}>
-        Form Elements Light
-      </Heading2>
+      <Heading2 className={`${styles.title} color-secondary-3`}>Form Elements Light</Heading2>
       <div className={styles.subContainer}>
-        <div className={`${styles.row} ${styles["row-1"]}`}>
+        <div className={`${styles.row} ${styles['row-1']}`}>
           <ControlDisplay
             spanText="Text Field - Default"
             controlLabelText="Streed Address"
@@ -50,16 +48,13 @@ const FormElementsDisplaySection = (props) => {
             />
           </ControlDisplay>
         </div>
-        <div className={`${styles.row} ${styles["row-2"]}`}>
+        <div className={`${styles.row} ${styles['row-2']}`}>
           <ControlDisplay
             spanText="Text Field - Filled"
             controlLabelText="Streed Address"
             controlId="textFieldDemo2"
           >
-            <InputControl
-              controlId="textFieldDemo2"
-              value="Lorem Ipsum Dolor"
-            />
+            <InputControl controlId="textFieldDemo2" value="Lorem Ipsum Dolor" />
           </ControlDisplay>
           <ControlDisplay
             spanText="Dropdown - Hover"
@@ -86,7 +81,7 @@ const FormElementsDisplaySection = (props) => {
             />
           </ControlDisplay>
         </div>
-        <div className={`${styles.row} ${styles["row-3"]}`}>
+        <div className={`${styles.row} ${styles['row-3']}`}>
           <ControlDisplay
             spanText="Text Field - Active"
             controlLabelText="Streed Address"

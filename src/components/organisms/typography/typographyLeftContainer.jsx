@@ -1,10 +1,10 @@
-import TypographyHeadingDescriptor from "../../molecules/typography/typographyHeadingDescriptor";
-import Heading1 from "../../atoms/headings/heading1";
-import Heading2 from "../../atoms/headings/heading2";
-import Heading3 from "../../atoms/headings/heading3";
-import Heading4 from "../../atoms/headings/heading4";
+import TypographyHeadingDescriptor from '../../molecules/typography/typographyHeadingDescriptor';
+import Heading1 from '../../atoms/headings/heading1';
+import Heading2 from '../../atoms/headings/heading2';
+import Heading3 from '../../atoms/headings/heading3';
+import Heading4 from '../../atoms/headings/heading4';
 
-import styles from "./typographyLeftContainer.module.scss";
+import styles from './typographyLeftContainer.module.scss';
 
 const TypographyLeftContainer = (props) => {
   return (

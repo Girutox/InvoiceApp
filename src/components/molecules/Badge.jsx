@@ -1,7 +1,7 @@
-import BadgeBackground from "../atoms/Badge/BadgeBackground";
-import BadgeOval from "../atoms/Badge/BadgeOval";
-import SpanCustom from "../atoms/spanCustom";
-import styles from "./Badge.module.scss";
+import BadgeBackground from '../atoms/Badge/BadgeBackground';
+import BadgeOval from '../atoms/Badge/BadgeOval';
+import SpanCustom from '../atoms/spanCustom';
+import styles from './Badge.module.scss';
 
 const Badge = (props) => {
   return (

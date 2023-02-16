@@ -1,5 +1,5 @@
-import ColorDisplayLabel from "../../atoms/colorDisplay/colorDisplayLabel";
-import styles from "./colorDisplayExtraInfo.module.scss";
+import ColorDisplayLabel from '../../atoms/colorDisplay/colorDisplayLabel';
+import styles from './colorDisplayExtraInfo.module.scss';
 
 const ColorDisplayExtraInfo = (props) => {
   return (

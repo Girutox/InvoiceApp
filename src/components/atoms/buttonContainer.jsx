@@ -6,6 +6,6 @@ const ButtonContainer = (props) => {
       {props.children}
     </button>
   );
-}
- 
+};
+
 export default ButtonContainer;

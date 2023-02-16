@@ -1,22 +1,20 @@
-import Heading2 from "../atoms/headings/heading2";
-import ButtonDisplay from "../organisms/buttonDisplay";
-import Button1Default from "../organisms/buttons/button1Default";
-import Button2Default from "../organisms/buttons/button2Default";
-import Button3Default from "../organisms/buttons/button3Default";
-import Button4Default from "../organisms/buttons/button4Default";
-import Button5Default from "../organisms/buttons/button5Default";
-import Button6Default from "../organisms/buttons/button6Default";
+import Heading2 from '../atoms/headings/heading2';
+import ButtonDisplay from '../organisms/buttonDisplay';
+import Button1Default from '../organisms/buttons/button1Default';
+import Button2Default from '../organisms/buttons/button2Default';
+import Button3Default from '../organisms/buttons/button3Default';
+import Button4Default from '../organisms/buttons/button4Default';
+import Button5Default from '../organisms/buttons/button5Default';
+import Button6Default from '../organisms/buttons/button6Default';
 
-import styles from "./buttonDisplaySection.module.scss";
+import styles from './buttonDisplaySection.module.scss';
 
 const ButtonDisplaySection = (props) => {
   return (
     <section className={styles.container}>
-      <Heading2 className={`${styles.title} color-secondary-3`}>
-        Buttons
-      </Heading2>
+      <Heading2 className={`${styles.title} color-secondary-3`}>Buttons</Heading2>
       <div className={styles.subContainer}>
-        <div className={`${styles.row} ${styles["row-1"]}`}>
+        <div className={`${styles.row} ${styles['row-1']}`}>
           <ButtonDisplay titleText="Button 1 - Default">
             <Button1Default spanText="New Invoice" />
           </ButtonDisplay>
@@ -28,7 +26,7 @@ const ButtonDisplaySection = (props) => {
             <Button3Default spanText="Edit" />
           </ButtonDisplay>
         </div>
-        <div className={`${styles.row} ${styles["row-2"]}`}>
+        <div className={`${styles.row} ${styles['row-2']}`}>
           <ButtonDisplay titleText="Button 1 - Hover">
             <Button1Default spanText="New Invoice" applyHover={true} />
           </ButtonDisplay>
@@ -40,7 +38,7 @@ const ButtonDisplaySection = (props) => {
             <Button3Default spanText="Edit" applyHover={true} />
           </ButtonDisplay>
         </div>
-        <div className={`${styles.row} ${styles["row-3"]}`}>
+        <div className={`${styles.row} ${styles['row-3']}`}>
           <ButtonDisplay titleText="Button 4 - Default (Light/Dark)">
             <Button4Default spanText="Save as Draft" />
             <Button4Default spanText="Save as Draft" />
@@ -52,7 +50,7 @@ const ButtonDisplaySection = (props) => {
             <Button6Default spanText="+ Add New Item" />
           </ButtonDisplay>
         </div>
-        <div className={`${styles.row} ${styles["row-4"]}`}>
+        <div className={`${styles.row} ${styles['row-4']}`}>
           <ButtonDisplay titleText="Button 4 - Hover (Light/Dark)">
             <Button4Default spanText="Save as Draft" applyHover={true} />
             <Button4Default spanText="Save as Draft" applyHover={true} />

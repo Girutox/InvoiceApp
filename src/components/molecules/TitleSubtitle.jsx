@@ -10,6 +10,6 @@ const TitleSubtitle = (props) => {
       <SpanCustom className="body2 color-secondary-2">{props.subTitle}</SpanCustom>
     </div>
   );
-}
- 
+};
+
 export default TitleSubtitle;

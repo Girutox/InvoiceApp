@@ -11,6 +11,6 @@ const ControlDisplay = (props) => {
       </FormControl>
     </div>
   );
-}
- 
+};
+
 export default ControlDisplay;
