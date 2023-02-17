@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  .title {
+  }
+
+  .subtitle {
+    font-size: 15px;
+    margin-top: 14px;
+  }
+
+  .extraInfo {
+    margin-top: 14px;
+    line-height: 25px;
+  }
+}
