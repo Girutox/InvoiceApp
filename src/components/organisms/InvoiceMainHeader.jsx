@@ -9,7 +9,7 @@ const InvoiceMainHeader = (props) => {
     <div className={styles.container}>
       <TitleSubtitle
         className={styles.titleSubTitleContainer}
-        title="Invoices"
+        title="Invoices TEST"
         subTitle={`${props.mainData.length} invoices`}
       />
       <div className={styles.filterGroup}>
