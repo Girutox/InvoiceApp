@@ -6,7 +6,7 @@ import InvoiceMainHeader from '../organisms/InvoiceMainHeader';
 
 const InvoicesGridSection = (props) => {
   return (
-    <section className={styles.sectionMain}>
+    <section className={styles.mainContainer}>
       <InvoiceMainHeader mainData={mainData} />
       {mainData?.map((item) => {
         return <InvoiceGridRow key={item.id} data={item} />;

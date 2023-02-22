@@ -14,6 +14,10 @@ const InvoiceToolbar = ({ statusId, id }) => {
     id: PropTypes.number
   };
 
+  const editClickHandler = () => {
+
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.infoGroup}>
@@ -47,7 +51,7 @@ const InvoiceToolbar = ({ statusId, id }) => {
         )}
       </div>
       <div className={styles.buttonGroup}>
-        <Button3Default spanText="Edit" />
+        <Button3Default onClick={editClickHandler} spanText="Edit" />
         <Button5Default spanText="Delete" />
         <Button2Default spanText="Mark as Paid" />
       </div>

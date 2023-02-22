@@ -8,9 +8,8 @@ const Button1Default = (props) => {
   return (
     <div>
       <ButtonLayout
-        classNameButton={`${styles.hoverHandler} ${
-          applyHover ? styles.applyHover : ''
-        } bgc-primary`}
+        classNameButton={`${styles.hoverHandler} ${applyHover ? styles.applyHover : ''
+          } bgc-primary`}
         includeSign={true}
         signValue={'+'}
         classNameCircle="bgc-white"
