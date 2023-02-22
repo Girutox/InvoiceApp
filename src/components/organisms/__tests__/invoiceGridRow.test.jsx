@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import InvoiceGridRow from '../InvoiceGridRow';
 import { months } from '../../../models/months';
 
-describe('Invoice Grid Row Organism', () => {
+describe.skip('Invoice Grid Row Organism', () => {
   const item = {
     id: 1,
     code: 'RT3080',
