@@ -2,7 +2,7 @@ import { any } from 'prop-types';
 import SpanCustom from '../atoms/spanCustom';
 import SpanTitleSubtitle from '../molecules/SpanTitleSubtitle';
 import styles from './InvoiceInfoGroup.module.scss';
-import { getCurrencyNumber } from '../../utils/utils';
+import { getCurrencyNumber, formatDateToString } from '../../utils/utils';
 
 const InvoiceInfoGroup = ({ data }) => {
   InvoiceInfoGroup.propTypes = {
@@ -21,7 +21,7 @@ const InvoiceInfoGroup = ({ data }) => {
     billToPostCode,
     billToCountry,
     invoiceDate,
-    paymentDue,
+    paymentDueDate,
     billTo,
     sentTo,
     detailRows
@@ -49,8 +49,8 @@ const InvoiceInfoGroup = ({ data }) => {
       </div>
       <div className={styles.detail}>
         <div className={styles.column}>
-          <SpanTitleSubtitle title="Invoice Date" subtitle={invoiceDate} />
-          <SpanTitleSubtitle title="Payment Due" subtitle={paymentDue} />
+          <SpanTitleSubtitle title="Invoice Date" subtitle={formatDateToString('', invoiceDate)} />
+          <SpanTitleSubtitle title="Payment Due" subtitle={formatDateToString('', paymentDueDate)} />
         </div>
         <div className={styles.column}>
           <SpanTitleSubtitle title="Bill To" subtitle={billTo} />
@@ -78,16 +78,16 @@ const InvoiceInfoGroup = ({ data }) => {
               {detailRows?.map((row) => {
                 return (
                   <tr key={row.id}>
-                    <td key={row.id} className="body2">
+                    <td key={`td1${row.id}`} className="body2">
                       {row.itemName}
                     </td>
-                    <td key={row.id} className="body2">
+                    <td key={`td2${row.id}`} className="body2">
                       {row.itemQuantity}
                     </td>
-                    <td key={row.id} className="body2">
+                    <td key={`td3${row.id}`} className="body2">
                       {getCurrencyNumber('$', row.itemPrice)}
                     </td>
-                    <td key={row.id} className="body2">
+                    <td key={`td4${row.id}`} className="body2">
                       {getCurrencyNumber('$', row.itemPrice * row.itemQuantity)}
                     </td>
                   </tr>

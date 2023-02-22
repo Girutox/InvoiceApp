@@ -1,44 +1,28 @@
 import styles from './ViewInvoiceSection.module.scss';
 import InvoiceToolbar from '../organisms/InvoiceToolbar';
 import InvoiceInfoGroup from '../organisms/InvoiceInfoGroup';
+import { useNavigate } from 'react-router-dom';
+import { mainData } from '../../models/invoiceMainData';
 
 import { formatDateToString } from '../../utils/utils';
+import SpanCustom from '../atoms/spanCustom';
 
-const ViewInvoiceSection = () => {
-  const data = {
-    code: 'XM9141',
-    projectDescription: 'Graphic Design',
-    billFromStreetAddress: '19 Union Terrace',
-    billFromCity: 'London',
-    billFromPostCode: 'E1 3EZ',
-    billFromCountry: 'United Kingdom',
-    billToStreetAddress: '84 Church Way',
-    billToCity: 'Bradford',
-    billToPostCode: 'BD1 9PB',
-    billToCountry: 'United Kingdom',
-    invoiceDate: formatDateToString('', new Date(2021, 7, 21)),
-    paymentDue: formatDateToString('', new Date(2021, 8, 20)),
-    billTo: 'Alex Grim',
-    sentTo: 'alexgrim@mail.com',
-    detailRows: [
-      {
-        id: 1,
-        itemName: 'Banner Design',
-        itemQuantity: 1,
-        itemPrice: 156
-      },
-      {
-        id: 2,
-        itemName: 'Email Design',
-        itemQuantity: 2,
-        itemPrice: 200
-      }
-    ]
+const ViewInvoiceSection = ({ id }) => {
+  const navigate = useNavigate();
+
+  const data = mainData.filter(a => a.id === +id)[0];
+
+  const spanReturnHandler = () => {
+    navigate(-1);
   };
 
   return (
     <div className={styles.container}>
-      <InvoiceToolbar statusId={2} id={1} />
+      <div className={styles.breadcrumb}>
+        <SpanCustom onClick={spanReturnHandler} className="body2 color-primary text-bold">&lt;</SpanCustom>
+        <SpanCustom className="body2 color-secondary-4 text-bold">Go back</SpanCustom>
+      </div>
+      <InvoiceToolbar statusId={2} id={1} className={styles.toolbar} />
       <InvoiceInfoGroup data={data} />
     </div>
   );

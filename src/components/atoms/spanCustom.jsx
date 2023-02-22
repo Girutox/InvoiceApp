@@ -1,5 +1,5 @@
 const SpanCustom = (props) => {
-  return <span className={props.className}>{props.children}</span>;
+  return <span onClick={props.onClick} className={props.className}>{props.children}</span>;
 };
 
 export default SpanCustom;

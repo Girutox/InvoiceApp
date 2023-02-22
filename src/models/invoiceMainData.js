@@ -2,57 +2,232 @@ export const mainData = [
   {
     id: 1,
     code: 'RT3080',
-    dueDate: new Date(2021, 7, 19),
-    user: 'Jensen Huang',
     value: 1800.9,
-    statusId: 3
+    statusId: 3,
+    projectDescription: 'Graphic Design',
+    billFromStreetAddress: '19 Union Terrace',
+    billFromCity: 'London',
+    billFromPostCode: 'E1 3EZ',
+    billFromCountry: 'United Kingdom',
+    billToStreetAddress: '84 Church Way',
+    billToCity: 'Bradford',
+    billToPostCode: 'BD1 9PB',
+    billToCountry: 'United Kingdom',
+    invoiceDate: new Date(2021, 7, 21),
+    paymentDueDate: new Date(2021, 7, 19),
+    billTo: 'Jensen Huang',
+    sentTo: 'alexgrim@mail.com',
+    detailRows: [
+      {
+        id: 1,
+        itemName: 'Banner Design',
+        itemQuantity: 1,
+        itemPrice: 156
+      },
+      {
+        id: 2,
+        itemName: 'Email Design',
+        itemQuantity: 2,
+        itemPrice: 200
+      }
+    ]
   },
   {
     id: 2,
     code: 'XM9141',
-    dueDate: new Date(2021, 8, 20),
-    user: 'Alex Grim',
     value: 556.0,
-    statusId: 2
+    statusId: 2,
+    projectDescription: 'Graphic Design',
+    billFromStreetAddress: '19 Union Terrace',
+    billFromCity: 'London',
+    billFromPostCode: 'E1 3EZ',
+    billFromCountry: 'United Kingdom',
+    billToStreetAddress: '84 Church Way',
+    billToCity: 'Bradford',
+    billToPostCode: 'BD1 9PB',
+    billToCountry: 'United Kingdom',
+    invoiceDate: new Date(2021, 7, 21),
+    paymentDueDate: new Date(2021, 8, 20),
+    billTo: 'Alex Grim',
+    sentTo: 'alexgrim@mail.com',
+    detailRows: [
+      {
+        id: 1,
+        itemName: 'Banner Design',
+        itemQuantity: 1,
+        itemPrice: 156
+      },
+      {
+        id: 2,
+        itemName: 'Email Design',
+        itemQuantity: 2,
+        itemPrice: 200
+      }
+    ]
   },
   {
     id: 3,
     code: 'RG0314',
-    dueDate: new Date(2021, 9, 1),
-    user: 'John Morrison',
     value: 14002.33,
-    statusId: 3
+    statusId: 3,
+    projectDescription: 'Graphic Design',
+    billFromStreetAddress: '19 Union Terrace',
+    billFromCity: 'London',
+    billFromPostCode: 'E1 3EZ',
+    billFromCountry: 'United Kingdom',
+    billToStreetAddress: '84 Church Way',
+    billToCity: 'Bradford',
+    billToPostCode: 'BD1 9PB',
+    billToCountry: 'United Kingdom',
+    invoiceDate: new Date(2021, 7, 21),
+    paymentDueDate: new Date(2021, 9, 1),
+    billTo: 'John Morrison',
+    sentTo: 'alexgrim@mail.com',
+    detailRows: [
+      {
+        id: 1,
+        itemName: 'Banner Design',
+        itemQuantity: 1,
+        itemPrice: 156
+      },
+      {
+        id: 2,
+        itemName: 'Email Design',
+        itemQuantity: 2,
+        itemPrice: 200
+      }
+    ]
   },
   {
     id: 4,
     code: 'RT2080',
-    dueDate: new Date(2021, 9, 12),
-    user: 'Alysa Werner',
     value: 102.04,
-    statusId: 2
+    statusId: 2,
+    projectDescription: 'Graphic Design',
+    billFromStreetAddress: '19 Union Terrace',
+    billFromCity: 'London',
+    billFromPostCode: 'E1 3EZ',
+    billFromCountry: 'United Kingdom',
+    billToStreetAddress: '84 Church Way',
+    billToCity: 'Bradford',
+    billToPostCode: 'BD1 9PB',
+    billToCountry: 'United Kingdom',
+    invoiceDate: new Date(2021, 7, 21),
+    paymentDueDate: new Date(2021, 9, 12),
+    billTo: 'Alysa Werner',
+    sentTo: 'alexgrim@mail.com',
+    detailRows: [
+      {
+        id: 1,
+        itemName: 'Banner Design',
+        itemQuantity: 1,
+        itemPrice: 156
+      },
+      {
+        id: 2,
+        itemName: 'Email Design',
+        itemQuantity: 2,
+        itemPrice: 200
+      }
+    ]
   },
   {
     id: 5,
     code: 'AA1449',
-    dueDate: new Date(2021, 9, 14),
-    user: 'Mellisa Clarke',
     value: 4032.33,
-    statusId: 2
+    statusId: 2,
+    projectDescription: 'Graphic Design',
+    billFromStreetAddress: '19 Union Terrace',
+    billFromCity: 'London',
+    billFromPostCode: 'E1 3EZ',
+    billFromCountry: 'United Kingdom',
+    billToStreetAddress: '84 Church Way',
+    billToCity: 'Bradford',
+    billToPostCode: 'BD1 9PB',
+    billToCountry: 'United Kingdom',
+    invoiceDate: new Date(2021, 7, 21),
+    paymentDueDate: new Date(2021, 9, 14),
+    billTo: 'Mellisa Clarke',
+    sentTo: 'alexgrim@mail.com',
+    detailRows: [
+      {
+        id: 1,
+        itemName: 'Banner Design',
+        itemQuantity: 1,
+        itemPrice: 156
+      },
+      {
+        id: 2,
+        itemName: 'Email Design',
+        itemQuantity: 2,
+        itemPrice: 200
+      }
+    ]
   },
   {
     id: 6,
     code: 'TY9141',
-    dueDate: new Date(2021, 9, 31),
-    user: 'Thomas Wayne',
     value: 6155.91,
-    statusId: 2
+    statusId: 2,
+    projectDescription: 'Graphic Design',
+    billFromStreetAddress: '19 Union Terrace',
+    billFromCity: 'London',
+    billFromPostCode: 'E1 3EZ',
+    billFromCountry: 'United Kingdom',
+    billToStreetAddress: '84 Church Way',
+    billToCity: 'Bradford',
+    billToPostCode: 'BD1 9PB',
+    billToCountry: 'United Kingdom',
+    invoiceDate: new Date(2021, 7, 21),
+    paymentDueDate: new Date(2021, 9, 31),
+    billTo: 'Thomas Wayne',
+    sentTo: 'alexgrim@mail.com',
+    detailRows: [
+      {
+        id: 1,
+        itemName: 'Banner Design',
+        itemQuantity: 1,
+        itemPrice: 156
+      },
+      {
+        id: 2,
+        itemName: 'Email Design',
+        itemQuantity: 2,
+        itemPrice: 200
+      }
+    ]
   },
   {
     id: 7,
     code: 'FV2353',
-    dueDate: new Date(2021, 10, 12),
-    user: 'Anita Wainwright',
     value: 3102.04,
-    statusId: 1
+    statusId: 1,
+    projectDescription: 'Graphic Design',
+    billFromStreetAddress: '19 Union Terrace',
+    billFromCity: 'London',
+    billFromPostCode: 'E1 3EZ',
+    billFromCountry: 'United Kingdom',
+    billToStreetAddress: '84 Church Way',
+    billToCity: 'Bradford',
+    billToPostCode: 'BD1 9PB',
+    billToCountry: 'United Kingdom',
+    invoiceDate: new Date(2021, 7, 21),
+    paymentDueDate: new Date(2021, 10, 12),
+    billTo: 'Anita Wainwright',
+    sentTo: 'alexgrim@mail.com',
+    detailRows: [
+      {
+        id: 1,
+        itemName: 'Banner Design',
+        itemQuantity: 1,
+        itemPrice: 156
+      },
+      {
+        id: 2,
+        itemName: 'Email Design',
+        itemQuantity: 2,
+        itemPrice: 200
+      }
+    ]
   }
 ];

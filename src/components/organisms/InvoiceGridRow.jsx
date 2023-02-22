@@ -1,22 +1,25 @@
 import SpanCustom from '../atoms/spanCustom';
 import Badge from '../molecules/Badge';
 import { formatDateToString, getCurrencyNumber } from '../../utils/utils';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './InvoiceGridRow.module.scss';
 
 const InvoiceGridRow = (props) => {
-  const { id, code, dueDate, user, value, statusId } = props.data;
+  const navigate = useNavigate();
+
+  const { id, code, paymentDueDate, billTo, value, statusId } = props.data;
 
   return (
-    <div key={id} className={`${styles.container} bgc-white`}>
+    <div key={id} onClick={() => navigate(`viewInvoice/${id}`)} className={`${styles.container} bgc-white`}>
       <SpanCustom key={`sp1${id}`} className="body2 color-secondary-4 text-bold">
         {code}
       </SpanCustom>
       <SpanCustom key={`sp2${id}`} className="body2 color-secondary-2">
-        {formatDateToString('Due', dueDate)}
+        {formatDateToString('Due', paymentDueDate)}
       </SpanCustom>
       <SpanCustom key={`sp3${id}`} className="body2 color-secondary-2">
-        {user}
+        {billTo}
       </SpanCustom>
       <SpanCustom key={`sp4${id}`} className="body2 color-secondary-4 text-bold">
         {getCurrencyNumber('$', value)}
