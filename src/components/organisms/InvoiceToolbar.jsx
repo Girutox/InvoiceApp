@@ -8,15 +8,16 @@ import Button5Default from './buttons/button5Default';
 import Button2Default from './buttons/button2Default';
 import Button3Default from './buttons/button3Default';
 
-const InvoiceToolbar = ({ statusId, id }) => {
+const InvoiceToolbar = ({ data }) => {
   InvoiceToolbar.propTypes = {
-    statusId: PropTypes.number,
-    id: PropTypes.number
+    data: PropTypes.object
   };
+
+  const { statusId, id } = data;
 
   const editClickHandler = () => {
 
-  }
+  };
 
   return (
     <div className={styles.container}>

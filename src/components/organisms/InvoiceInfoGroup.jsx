@@ -27,7 +27,7 @@ const InvoiceInfoGroup = ({ data }) => {
     detailRows
   } = data;
 
-  const amountDue = 556;
+  const amountDue = detailRows?.reduce((prev, current) => prev + (current.itemPrice * current.itemQuantity), 0);
 
   return (
     <div className={styles.container}>

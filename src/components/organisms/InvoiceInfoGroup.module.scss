@@ -33,7 +33,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    padding-right: 120px;
+    padding-right: 50px;
   }
 
   .gridContainer {
@@ -121,7 +121,6 @@
 .column {
   display: flex;
   flex-direction: column;
-  max-width: 150px;
 }
 
 .columnTextAlign {

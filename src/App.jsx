@@ -17,13 +17,17 @@ function App() {
         <Route path="/" element={
           <div className="app-container">
             <LeftSideBar />
-            <InvoiceMain />
+            <main className="app-mainContainer">
+              <InvoiceMain />
+            </main>
           </div>
         } />
         <Route path="/viewInvoice/:id" element={
           <div className="app-container">
             <LeftSideBar />
-            <InvoiceViewDetail />
+            <main className="app-mainContainer">
+              <InvoiceViewDetail />
+            </main>
           </div>
         } />
         <Route path="/designSystem" element={<DesignSystem />} />

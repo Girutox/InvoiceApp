@@ -4,7 +4,6 @@ import InvoiceInfoGroup from '../organisms/InvoiceInfoGroup';
 import { useNavigate } from 'react-router-dom';
 import { mainData } from '../../models/invoiceMainData';
 
-import { formatDateToString } from '../../utils/utils';
 import SpanCustom from '../atoms/spanCustom';
 
 const ViewInvoiceSection = ({ id }) => {
@@ -22,7 +21,7 @@ const ViewInvoiceSection = ({ id }) => {
         <SpanCustom onClick={spanReturnHandler} className="body2 color-primary text-bold">&lt;</SpanCustom>
         <SpanCustom className="body2 color-secondary-4 text-bold">Go back</SpanCustom>
       </div>
-      <InvoiceToolbar statusId={2} id={1} className={styles.toolbar} />
+      <InvoiceToolbar data={data} className={styles.toolbar} />
       <InvoiceInfoGroup data={data} />
     </div>
   );

@@ -7,9 +7,9 @@ const InvoiceViewDetail = () => {
 
   return (
     <>
-      <main className={styles.mainContainer}>
-        <ViewInvoiceSection id={id} />
-      </main>
+      {/* <main className={styles.mainContainer}> */}
+      <ViewInvoiceSection id={id} />
+      {/* </main> */}
     </>
   );
 };

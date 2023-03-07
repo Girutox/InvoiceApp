@@ -9,14 +9,14 @@ const InvoiceMainHeader = (props) => {
     <div className={styles.container}>
       <TitleSubtitle
         className={styles.titleSubTitleContainer}
-        title="Invoices TEST"
-        subTitle={`${props.mainData.length} invoices`}
+        title="Invoices"
+        subTitle={`There are ${props.mainData.length} total invoices`}
       />
       <div className={styles.filterGroup}>
-        <SpanCustom className="body2 color-secondary-4 text-bold">Filter</SpanCustom>
+        <SpanCustom className="body2 color-secondary-4 text-bold">Filter by status</SpanCustom>
         <SpanCustom className="body2 color-primary text-bold">&#32;</SpanCustom>
       </div>
-      <Button1Default spanText="New" />
+      <Button1Default spanText="New Invoice" />
     </div>
   );
 };

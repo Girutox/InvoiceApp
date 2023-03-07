@@ -55,13 +55,13 @@ export const mainData = [
         id: 1,
         itemName: 'Banner Design',
         itemQuantity: 1,
-        itemPrice: 156
+        itemPrice: 126
       },
       {
         id: 2,
         itemName: 'Email Design',
         itemQuantity: 2,
-        itemPrice: 200
+        itemPrice: 300
       }
     ]
   },
@@ -88,13 +88,13 @@ export const mainData = [
         id: 1,
         itemName: 'Banner Design',
         itemQuantity: 1,
-        itemPrice: 156
+        itemPrice: 67
       },
       {
         id: 2,
         itemName: 'Email Design',
         itemQuantity: 2,
-        itemPrice: 200
+        itemPrice: 99
       }
     ]
   },
@@ -104,7 +104,7 @@ export const mainData = [
     value: 102.04,
     statusId: 2,
     projectDescription: 'Graphic Design',
-    billFromStreetAddress: '19 Union Terrace',
+    billFromStreetAddress: '29 Union Terrace',
     billFromCity: 'London',
     billFromPostCode: 'E1 3EZ',
     billFromCountry: 'United Kingdom',
@@ -121,13 +121,19 @@ export const mainData = [
         id: 1,
         itemName: 'Banner Design',
         itemQuantity: 1,
-        itemPrice: 156
+        itemPrice: 300
       },
       {
         id: 2,
         itemName: 'Email Design',
         itemQuantity: 2,
-        itemPrice: 200
+        itemPrice: 100
+      },
+      {
+        id: 3,
+        itemName: 'Other Design',
+        itemQuantity: 1,
+        itemPrice: 45
       }
     ]
   },
