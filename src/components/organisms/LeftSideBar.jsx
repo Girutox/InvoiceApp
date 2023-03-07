@@ -23,6 +23,6 @@ const LeftSideBar = () => {
             </div>
         </div>
     );
-}
+};
 
 export default LeftSideBar;

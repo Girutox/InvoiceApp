@@ -1,3 +1,4 @@
+// export const mainData = [];
 export const mainData = [
   {
     id: 1,

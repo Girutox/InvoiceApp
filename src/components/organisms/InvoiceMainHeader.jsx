@@ -15,10 +15,11 @@ const InvoiceMainHeader = ({ mainData }) => {
   let filterTerxt = 'Filter by status';
   let newButtonText = 'New Invoice';
   if (width <= 375) {
-    subTitle = `${mainData.length} total invoices`;
+    subTitle = `${mainData.length} invoices`;
     filterTerxt = 'Filter';
     newButtonText = 'New';
   }
+  subTitle = (mainData.length === 0) ? 'No invoices' : subTitle;
 
   return (
     <div className={styles.container}>

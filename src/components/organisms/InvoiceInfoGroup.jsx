@@ -1,3 +1,5 @@
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+
 import { any } from 'prop-types';
 import SpanCustom from '../atoms/spanCustom';
 import SpanTitleSubtitle from '../molecules/SpanTitleSubtitle';
@@ -8,6 +10,8 @@ const InvoiceInfoGroup = ({ data }) => {
   InvoiceInfoGroup.propTypes = {
     data: any
   };
+
+  const { width } = useWindowDimensions();
 
   const {
     code,
@@ -48,20 +52,47 @@ const InvoiceInfoGroup = ({ data }) => {
         </div>
       </div>
       <div className={styles.detail}>
-        <div className={styles.column}>
-          <SpanTitleSubtitle title="Invoice Date" subtitle={formatDateToString('', invoiceDate)} />
-          <SpanTitleSubtitle title="Payment Due" subtitle={formatDateToString('', paymentDueDate)} />
-        </div>
-        <div className={styles.column}>
-          <SpanTitleSubtitle title="Bill To" subtitle={billTo} />
-          <SpanCustom className="body1 color-secondary-3">{billToStreetAddress}</SpanCustom>
-          <SpanCustom className="body1 color-secondary-3">{billToCity}</SpanCustom>
-          <SpanCustom className="body1 color-secondary-3">{billToPostCode}</SpanCustom>
-          <SpanCustom className="body1 color-secondary-3">{billToCountry}</SpanCustom>
-        </div>
-        <div className={styles.column}>
-          <SpanTitleSubtitle title="Sent To" subtitle={sentTo} />
-        </div>
+        {
+          width > 375 &&
+          <>
+            <div className={styles.column}>
+              <SpanTitleSubtitle title="Invoice Date" subtitle={formatDateToString('', invoiceDate)} />
+              <SpanTitleSubtitle title="Payment Due" subtitle={formatDateToString('', paymentDueDate)} />
+            </div>
+            <div className={styles.column}>
+              <SpanTitleSubtitle title="Bill To" subtitle={billTo} />
+              <SpanCustom className="body1 color-secondary-3">{billToStreetAddress}</SpanCustom>
+              <SpanCustom className="body1 color-secondary-3">{billToCity}</SpanCustom>
+              <SpanCustom className="body1 color-secondary-3">{billToPostCode}</SpanCustom>
+              <SpanCustom className="body1 color-secondary-3">{billToCountry}</SpanCustom>
+            </div>
+          </>
+        }
+        {
+          width <= 375 &&
+          <>
+            <div className={styles.mainGroup}>
+              <div className={styles.group01}>
+                <div className={styles.column}>
+                  <SpanTitleSubtitle title="Invoice Date" subtitle={formatDateToString('', invoiceDate)} />
+                  <SpanTitleSubtitle title="Payment Due" subtitle={formatDateToString('', paymentDueDate)} />
+                </div>
+              </div>
+              <div className={styles.group02}>
+                <div className={styles.column}>
+                  <SpanTitleSubtitle title="Bill To" subtitle={billTo} />
+                  <SpanCustom className="body1 color-secondary-3">{billToStreetAddress}</SpanCustom>
+                  <SpanCustom className="body1 color-secondary-3">{billToCity}</SpanCustom>
+                  <SpanCustom className="body1 color-secondary-3">{billToPostCode}</SpanCustom>
+                  <SpanCustom className="body1 color-secondary-3">{billToCountry}</SpanCustom>
+                </div>
+              </div>
+            </div>
+            <div className={styles.column}>
+              <SpanTitleSubtitle title="Sent To" subtitle={sentTo} />
+            </div>
+          </>
+        }
       </div>
       <div className={styles.gridContainer}>
         <div className={styles.grid}>

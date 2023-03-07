@@ -267,7 +267,7 @@ body {
 
   position: relative;
 
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .app-mainContainer {
@@ -277,6 +277,13 @@ body {
   flex-grow: 1;
 
   padding: 20px 20px;
+
+  overflow: auto;
+  min-height: 100vh;
+  height: 1px;
+  // min-width: calc(100vw - 72px);
+
+  flex-wrap: wrap;
 }
 
 @font-face {
@@ -289,12 +296,14 @@ body {
   src: local('Spartan-Bold'), url('./fonts/Spartan-Bold.ttf') format('truetype');
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .app-container {
     flex-direction: column;
   }
 
   .app-mainContainer {
     align-items: flex-start;
+    // min-width: 100vh;
+    min-height: calc(100vh - 72px);
   }
 }

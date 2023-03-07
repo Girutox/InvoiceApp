@@ -1,3 +1,5 @@
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+
 import PropTypes from 'prop-types';
 
 import SpanCustom from '../atoms/spanCustom';
@@ -12,6 +14,8 @@ const InvoiceToolbar = ({ data }) => {
   InvoiceToolbar.propTypes = {
     data: PropTypes.object
   };
+
+  const { width } = useWindowDimensions();
 
   const { statusId, id } = data;
 
@@ -51,11 +55,11 @@ const InvoiceToolbar = ({ data }) => {
           />
         )}
       </div>
-      <div className={styles.buttonGroup}>
+      {width > 375 && <div className={styles.buttonGroup}>
         <Button3Default onClick={editClickHandler} spanText="Edit" />
         <Button5Default spanText="Delete" />
         <Button2Default spanText="Mark as Paid" />
-      </div>
+      </div>}
     </div>
   );
 };
