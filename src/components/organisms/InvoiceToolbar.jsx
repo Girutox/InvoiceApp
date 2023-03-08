@@ -1,5 +1,11 @@
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
+import { useState } from 'react';
+
+import ReactDOM from 'react-dom';
+
+import Modal from '../ui/Modal';
+
 import PropTypes from 'prop-types';
 
 import SpanCustom from '../atoms/spanCustom';
@@ -9,6 +15,7 @@ import styles from './InvoiceToolbar.module.scss';
 import Button5Default from './buttons/button5Default';
 import Button2Default from './buttons/button2Default';
 import Button3Default from './buttons/button3Default';
+import ManageInvoice from '../templates/ManageInvoice';
 
 const InvoiceToolbar = ({ data }) => {
   InvoiceToolbar.propTypes = {
@@ -17,10 +24,18 @@ const InvoiceToolbar = ({ data }) => {
 
   const { width } = useWindowDimensions();
 
+  const [showModal, setShowModal] = useState(false);
+  const domElement = document.getElementById('modals');
+
   const { statusId, id } = data;
 
   const editClickHandler = () => {
+    setShowModal(true);
+  };
 
+  const closeModalHandler = () => {
+    setShowModal(false);
+    console.log(showModal);
   };
 
   return (
@@ -60,6 +75,15 @@ const InvoiceToolbar = ({ data }) => {
         <Button5Default spanText="Delete" />
         <Button2Default spanText="Mark as Paid" />
       </div>}
+      {
+        showModal &&
+        ReactDOM.createPortal(
+          <Modal onClick={closeModalHandler}>
+            <ManageInvoice />
+          </Modal>,
+          domElement
+        )
+      }
     </div>
   );
 };

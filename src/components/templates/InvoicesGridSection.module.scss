@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   align-self: stretch;
-  padding-top: 40px;
+  // padding-top: 40px;
   max-width: 800px;
   width: 800px;
 
@@ -13,7 +13,7 @@
   .dataGroup {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-self: stretch;
 
     height: 100%;
@@ -35,6 +35,10 @@
 
   .dataGroup:not(.empty) {
     margin-top: 5rem;
+  }
+
+  .empty {
+    justify-content: center;
   }
 }
 

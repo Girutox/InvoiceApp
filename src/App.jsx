@@ -27,6 +27,7 @@ function App() {
             <LeftSideBar />
             <main className="app-mainContainer">
               <InvoiceViewDetail />
+              <div id="modals"></div>
             </main>
           </div>
         } />

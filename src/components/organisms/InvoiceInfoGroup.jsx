@@ -1,15 +1,24 @@
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
+import Button5Default from './buttons/button5Default';
+import Button2Default from './buttons/button2Default';
+import Button3Default from './buttons/button3Default';
+
 import { any } from 'prop-types';
 import SpanCustom from '../atoms/spanCustom';
 import SpanTitleSubtitle from '../molecules/SpanTitleSubtitle';
 import styles from './InvoiceInfoGroup.module.scss';
 import { getCurrencyNumber, formatDateToString } from '../../utils/utils';
+import { ReactDOM, useState } from 'react';
+import Modal from '../ui/Modal';
 
 const InvoiceInfoGroup = ({ data }) => {
   InvoiceInfoGroup.propTypes = {
     data: any
   };
+
+  const [showModal, setShowModal] = useState(false);
+  const domElement = document.getElementById('modals');
 
   const { width } = useWindowDimensions();
 
@@ -32,6 +41,10 @@ const InvoiceInfoGroup = ({ data }) => {
   } = data;
 
   const amountDue = detailRows?.reduce((prev, current) => prev + (current.itemPrice * current.itemQuantity), 0);
+
+  const editClickHandler = () => {
+    setShowModal(true);
+  };
 
   return (
     <div className={styles.container}>
@@ -66,6 +79,9 @@ const InvoiceInfoGroup = ({ data }) => {
               <SpanCustom className="body1 color-secondary-3">{billToPostCode}</SpanCustom>
               <SpanCustom className="body1 color-secondary-3">{billToCountry}</SpanCustom>
             </div>
+            <div className={styles.column}>
+              <SpanTitleSubtitle title="Sent To" subtitle={sentTo} />
+            </div>
           </>
         }
         {
@@ -96,36 +112,63 @@ const InvoiceInfoGroup = ({ data }) => {
       </div>
       <div className={styles.gridContainer}>
         <div className={styles.grid}>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th className="body1">Item Name</th>
-                <th className="body1">QTY.</th>
-                <th className="body1">Price</th>
-                <th className="body1">Total</th>
-              </tr>
-            </thead>
-            <tbody>
+          {
+            width > 375 &&
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th className="body1">Item Name</th>
+                  <th className="body1">QTY.</th>
+                  <th className="body1">Price</th>
+                  <th className="body1">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {detailRows?.map((row) => {
+                  return (
+                    <tr key={row.id}>
+                      <td key={`td1${row.id}`} className="body2">
+                        {row.itemName}
+                      </td>
+                      <td key={`td2${row.id}`} className="body2">
+                        {row.itemQuantity}
+                      </td>
+                      <td key={`td3${row.id}`} className="body2">
+                        {getCurrencyNumber('$', row.itemPrice)}
+                      </td>
+                      <td key={`td4${row.id}`} className="body2">
+                        {getCurrencyNumber('$', row.itemPrice * row.itemQuantity)}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          }
+          {
+            width <= 375 &&
+            <div className={styles.customTable}>
               {detailRows?.map((row) => {
                 return (
-                  <tr key={row.id}>
-                    <td key={`td1${row.id}`} className="body2">
-                      {row.itemName}
-                    </td>
-                    <td key={`td2${row.id}`} className="body2">
-                      {row.itemQuantity}
-                    </td>
-                    <td key={`td3${row.id}`} className="body2">
-                      {getCurrencyNumber('$', row.itemPrice)}
-                    </td>
-                    <td key={`td4${row.id}`} className="body2">
-                      {getCurrencyNumber('$', row.itemPrice * row.itemQuantity)}
-                    </td>
-                  </tr>
+                  <div key={row.id} className={styles.rowCustomTable}>
+                    <div className={styles.column1CustomTable}>
+                      <SpanCustom className="body2 color-secondary-4 text-bold">
+                        {row.itemName}
+                      </SpanCustom>
+                      <SpanCustom className="body1 color-secondary-3">
+                        {`${row.itemQuantity} x ${getCurrencyNumber('$', row.itemPrice)}`}
+                      </SpanCustom>
+                    </div>
+                    <div className={styles.column1CustomTable}>
+                      <SpanCustom className="body2 color-secondary-4 text-bold">
+                        {getCurrencyNumber('$', row.itemPrice * row.itemQuantity)}
+                      </SpanCustom>
+                    </div>
+                  </div>
                 );
               })}
-            </tbody>
-          </table>
+            </div>
+          }
         </div>
         <div className={styles.footer}>
           <SpanCustom className="body2 color-white">Amount Due</SpanCustom>
@@ -133,6 +176,14 @@ const InvoiceInfoGroup = ({ data }) => {
             {getCurrencyNumber('$', amountDue)}
           </SpanCustom>
         </div>
+        {
+          width <= 375 &&
+          <div className={styles.fixedOptions}>
+            <Button3Default onClick={editClickHandler} spanText="Edit" />
+            <Button5Default spanText="Delete" />
+            <Button2Default spanText="Mark as Paid" />
+          </div>
+        }
       </div>
     </div>
   );
