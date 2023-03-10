@@ -66,7 +66,7 @@ const InvoiceInfoGroup = ({ data }) => {
       </div>
       <div className={styles.detail}>
         {
-          width > 375 &&
+          width >= 768 &&
           <>
             <div className={styles.column}>
               <SpanTitleSubtitle title="Invoice Date" subtitle={formatDateToString('', invoiceDate)} />
@@ -85,7 +85,7 @@ const InvoiceInfoGroup = ({ data }) => {
           </>
         }
         {
-          width <= 375 &&
+          width < 768 &&
           <>
             <div className={styles.mainGroup}>
               <div className={styles.group01}>
