@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import InvoiceGridRow from '../InvoiceGridRow';
 import { months } from '../../../models/months';
+// import { describe, it, expect } from 'jest';
 
 describe.skip('Invoice Grid Row Organism', () => {
   const item = {
@@ -44,30 +45,30 @@ describe.skip('Invoice Grid Row Organism', () => {
     expect(valueSpan).toBeInTheDocument();
   });
 
-  it('should render the STATUS field correctly (Draft)', () => {
-    item.statusId = 1;
-    render(<InvoiceGridRow key={item.id} data={item} />);
+  // it('should render the STATUS field correctly (Draft)', () => {
+  //   item.statusId = 1;
+  //   render(<InvoiceGridRow key={item.id} data={item} />);
 
-    const statusSpan = screen.getByText('Draft');
+  //   const statusSpan = screen.getByText('Draft');
 
-    expect(statusSpan).toBeInTheDocument();
-  });
+  //   expect(statusSpan).toBeInTheDocument();
+  // });
 
-  it('should render the STATUS field correctly (Pending)', () => {
-    item.statusId = 2;
-    render(<InvoiceGridRow key={item.id} data={item} />);
+  // it('should render the STATUS field correctly (Pending)', () => {
+  //   item.statusId = 2;
+  //   render(<InvoiceGridRow key={item.id} data={item} />);
 
-    const statusSpan = screen.getByText('Pending');
+  //   const statusSpan = screen.getByText('Pending');
 
-    expect(statusSpan).toBeInTheDocument();
-  });
+  //   expect(statusSpan).toBeInTheDocument();
+  // });
 
-  it('should render the STATUS field correctly (Paid)', () => {
-    item.statusId = 3;
-    render(<InvoiceGridRow key={item.id} data={item} />);
+  // it('should render the STATUS field correctly (Paid)', () => {
+  //   item.statusId = 3;
+  //   render(<InvoiceGridRow key={item.id} data={item} />);
 
-    const statusSpan = screen.getByText('Paid');
+  //   const statusSpan = screen.getByText('Paid');
 
-    expect(statusSpan).toBeInTheDocument();
-  });
+  //   expect(statusSpan).toBeInTheDocument();
+  // });
 });

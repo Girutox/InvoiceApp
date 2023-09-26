@@ -5,9 +5,20 @@ import styles from './InvoicesGridSection.module.scss';
 import InvoiceMainHeader from '../organisms/InvoiceMainHeader';
 import Heading1 from '../atoms/headings/heading1';
 
+// import { useSelector, useDispatch } from 'react-redux';
+// import { increment, decrement, incrementByAmount } from '../../redux/slices/counterSlice';
+
 const InvoicesGridSection = (props) => {
+  // const count = useSelector((state) => state.counter.value);
+  // const dispatch = useDispatch();
+
   return (
     <section className={styles.mainContainer}>
+      {/* <h4>{count}</h4>
+      <button onClick={() => dispatch(increment())}>Increase</button>
+      <button onClick={() => dispatch(decrement())}>Decrease</button>
+      <button onClick={() => dispatch(incrementByAmount(5))}>Increase +5</button> */}
+
       <InvoiceMainHeader mainData={mainData} />
       {
         mainData.length > 0 &&

@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 import ReactDOM from 'react-dom';
 
-import Modal from '../ui/Modal';
+// import Modal from '../ui/Modal';
+import Modal from 'react-modal';
 
 import PropTypes from 'prop-types';
 
@@ -17,6 +18,20 @@ import Button2Default from './buttons/button2Default';
 import Button3Default from './buttons/button3Default';
 import ManageInvoice from '../templates/ManageInvoice';
 
+const customStyles = {
+  content: {
+    top: '0',
+    left: '72px',
+    right: 'auto',
+    bottom: 'auto',
+    width: '700px'
+    // marginRight: '-50%'
+    // transform: 'translate(-50%, -50%)'
+  }
+};
+
+Modal.setAppElement('#root');
+
 const InvoiceToolbar = ({ data }) => {
   InvoiceToolbar.propTypes = {
     data: PropTypes.object
@@ -24,19 +39,31 @@ const InvoiceToolbar = ({ data }) => {
 
   const { width } = useWindowDimensions();
 
-  const [showModal, setShowModal] = useState(false);
-  const domElement = document.getElementById('modals');
+  // const [showModal, setShowModal] = useState(false);
+  // const domElement = document.getElementById('modals');
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   const { statusId, id } = data;
 
   const editClickHandler = () => {
-    setShowModal(true);
+    setIsOpen(true);
   };
 
-  const closeModalHandler = () => {
-    setShowModal(false);
-    console.log(showModal);
-  };
+  // const closeModalHandler = () => {
+  //   setShowModal(false);
+  // };
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <div className={styles.container}>
@@ -75,15 +102,15 @@ const InvoiceToolbar = ({ data }) => {
         <Button5Default spanText="Delete" />
         <Button2Default spanText="Mark as Paid" />
       </div>}
-      {
-        showModal &&
-        ReactDOM.createPortal(
-          <Modal onClick={closeModalHandler}>
-            <ManageInvoice />
-          </Modal>,
-          domElement
-        )
-      }
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <ManageInvoice data={data} />
+      </Modal>
     </div>
   );
 };
