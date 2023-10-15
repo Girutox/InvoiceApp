@@ -6,7 +6,7 @@ import styles from './buttonLayout.module.scss';
 
 const ButtonLayout = (props) => {
   return (
-    <ButtonContainer onClick={props.onClick} className={`${styles.customButton} ${props.classNameButton}`}>
+    <ButtonContainer type={'button'} onClick={props.onClick} className={`${styles.customButton} ${props.classNameButton}`}>
       {props.includeSign && (
         <PlusSign
           classNameCircle={`${styles.plusSign} ${props.classNameCircle}`}

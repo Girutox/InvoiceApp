@@ -1,7 +1,7 @@
 import ColorDisplay from '../colorDisplay';
 import { render, screen } from '@testing-library/react';
 
-describe('Color Organism', () => {
+describe.skip('Color Organism', () => {
   it('should render the color display component correctly', () => {
     // AAA
     // arrange

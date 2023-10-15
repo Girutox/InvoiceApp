@@ -14,7 +14,7 @@ const InvoiceGridRow = ({ data }) => {
 
   const { width } = useWindowDimensions();
 
-  const { id, code, paymentDueDate, billTo, value, statusId } = data;
+  const { id, code, paymentDueDate, billTo, value, status } = data;
 
   return (
     <div key={id} onClick={() => navigate(`viewInvoice/${id}`)} className={`${styles.container} bgc-white`}>
@@ -35,33 +35,13 @@ const InvoiceGridRow = ({ data }) => {
             <SpanCustom key={`sp3${id}`} className="body2 color-secondary-2">
               {billTo}
             </SpanCustom>
-            {statusId === 1 && (
-              <Badge
-                key={`b1${id}`}
-                classNameBackground="bgc-unknown-2__opacity"
-                classNameOval="bgc-unknown-2"
-                classNameText="body2 color-unknown-2 text-bold"
-                text="Draft"
-              />
-            )}
-            {statusId === 2 && (
-              <Badge
-                key={`b1${id}`}
-                classNameBackground="bgc-unknown-4__opacity"
-                classNameOval="bgc-unknown-4"
-                classNameText="body2 color-unknown-4 text-bold"
-                text="Pending"
-              />
-            )}
-            {statusId === 3 && (
-              <Badge
-                key={`b1${id}`}
-                classNameBackground="bgc-unknown-3__opacity"
-                classNameOval="bgc-unknown-3"
-                classNameText="body2 color-unknown-3 text-bold"
-                text="Paid"
-              />
-            )}
+            <Badge
+              key={`b1${id}`}
+              classNameBackground="bgc-unknown-2__opacity"
+              classNameOval="bgc-unknown-2"
+              classNameText="body2 color-unknown-2 text-bold"
+              status={status}
+            />
           </div>
         </>
       }
@@ -79,33 +59,13 @@ const InvoiceGridRow = ({ data }) => {
           <SpanCustom key={`sp4${id}`} className="body2 color-secondary-4 text-bold">
             {getCurrencyNumber('$', value)}
           </SpanCustom>
-          {statusId === 1 && (
-            <Badge
-              key={`b1${id}`}
-              classNameBackground="bgc-unknown-2__opacity"
-              classNameOval="bgc-unknown-2"
-              classNameText="body2 color-unknown-2 text-bold"
-              text="Draft"
-            />
-          )}
-          {statusId === 2 && (
-            <Badge
-              key={`b1${id}`}
-              classNameBackground="bgc-unknown-4__opacity"
-              classNameOval="bgc-unknown-4"
-              classNameText="body2 color-unknown-4 text-bold"
-              text="Pending"
-            />
-          )}
-          {statusId === 3 && (
-            <Badge
-              key={`b1${id}`}
-              classNameBackground="bgc-unknown-3__opacity"
-              classNameOval="bgc-unknown-3"
-              classNameText="body2 color-unknown-3 text-bold"
-              text="Paid"
-            />
-          )}
+          <Badge
+            key={`b1${id}`}
+            classNameBackground="bgc-unknown-2__opacity"
+            classNameOval="bgc-unknown-2"
+            classNameText="body2 color-unknown-2 text-bold"
+            status={status}
+          />
           <SpanCustom key={`sp5${id}`} className="body2 color-primary text-bold">
             &#32;
           </SpanCustom>

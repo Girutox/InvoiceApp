@@ -1,4 +1,3 @@
-import InputControl from '../atoms/inputControl';
 import LabelCustom from '../atoms/labelCustom';
 
 import styles from './formControl.module.scss';
