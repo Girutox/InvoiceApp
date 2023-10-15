@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './slices/counterSlice';
+import invoiceReducer from './slices/invoiceSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer
-  }
+    invoice: invoiceReducer
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false
+    })
 });

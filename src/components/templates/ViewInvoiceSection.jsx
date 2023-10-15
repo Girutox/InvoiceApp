@@ -2,12 +2,13 @@ import styles from './ViewInvoiceSection.module.scss';
 import InvoiceToolbar from '../organisms/InvoiceToolbar';
 import InvoiceInfoGroup from '../organisms/InvoiceInfoGroup';
 import { useNavigate } from 'react-router-dom';
-import { mainData } from '../../models/invoiceMainData';
+import { useSelector } from 'react-redux';
 
 import SpanCustom from '../atoms/spanCustom';
 
 const ViewInvoiceSection = ({ id }) => {
   const navigate = useNavigate();
+  const mainData = useSelector(state => state.invoice.invoices);
 
   const data = mainData.filter(a => a.id === +id)[0];
 

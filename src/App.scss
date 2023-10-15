@@ -288,6 +288,10 @@ body {
   flex-wrap: wrap;
 }
 
+.ReactModal__Overlay {
+  overflow: auto;
+}
+
 @font-face {
   font-family: 'Spartan Medium';
   src: local('Spartan-Medium'), url('./fonts/Spartan-Medium.ttf') format('truetype');

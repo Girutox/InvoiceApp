@@ -8,12 +8,12 @@ const Button2Default = (props) => {
   return (
     <div>
       <ButtonLayout
-        classNameButton={`${styles.hoverHandler} ${
-          applyHover ? styles.applyHover : ''
-        } bgc-primary`}
+        classNameButton={`${styles.hoverHandler} ${applyHover ? styles.applyHover : ''
+          } bgc-primary`}
         includeSign={false}
         classNameSpan="body1 text-bold color-white"
         spanText={props.spanText}
+        onClick={props.onClick}
       />
     </div>
   );

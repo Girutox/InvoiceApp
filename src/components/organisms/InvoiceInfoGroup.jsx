@@ -1,24 +1,34 @@
 import useWindowDimensions from '../../hooks/useWindowDimensions';
-
 import Button5Default from './buttons/button5Default';
 import Button2Default from './buttons/button2Default';
 import Button3Default from './buttons/button3Default';
-
 import { any } from 'prop-types';
 import SpanCustom from '../atoms/spanCustom';
 import SpanTitleSubtitle from '../molecules/SpanTitleSubtitle';
-import styles from './InvoiceInfoGroup.module.scss';
 import { getCurrencyNumber, formatDateToString } from '../../utils/utils';
-import { ReactDOM, useState } from 'react';
-import Modal from '../ui/Modal';
+import Modal from 'react-modal';
+import ManageInvoice from '../templates/ManageInvoice';
+import { useState } from 'react';
+
+import styles from './InvoiceInfoGroup.module.scss';
+
+const customStyles = {
+  content: {
+    top: '0',
+    left: '0',
+    right: 'auto',
+    bottom: 'auto',
+    width: '700px',
+    overflow: 'auto'
+  }
+};
+
+Modal.setAppElement('#root');
 
 const InvoiceInfoGroup = ({ data }) => {
   InvoiceInfoGroup.propTypes = {
     data: any
   };
-
-  const [showModal, setShowModal] = useState(false);
-  const domElement = document.getElementById('modals');
 
   const { width } = useWindowDimensions();
 
@@ -42,9 +52,18 @@ const InvoiceInfoGroup = ({ data }) => {
 
   const amountDue = detailRows?.reduce((prev, current) => prev + (current.itemPrice * current.itemQuantity), 0);
 
+  const [modalIsOpen, setIsOpen] = useState(false);
+
   const editClickHandler = () => {
-    setShowModal(true);
+    setIsOpen(true);
   };
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <div className={styles.container}>
@@ -185,6 +204,14 @@ const InvoiceInfoGroup = ({ data }) => {
           </div>
         }
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Invoice Modal">
+        <ManageInvoice data={data} onCloseModal={closeModal} />
+      </Modal>
     </div>
   );
 };

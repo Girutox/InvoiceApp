@@ -1,22 +1,15 @@
 import useWindowDimensions from '../../hooks/useWindowDimensions';
-
 import { useState } from 'react';
-
-import ReactDOM from 'react-dom';
-
-// import Modal from '../ui/Modal';
 import Modal from 'react-modal';
-
 import PropTypes from 'prop-types';
-
 import SpanCustom from '../atoms/spanCustom';
 import Badge from '../molecules/Badge';
-
-import styles from './InvoiceToolbar.module.scss';
 import Button5Default from './buttons/button5Default';
 import Button2Default from './buttons/button2Default';
 import Button3Default from './buttons/button3Default';
 import ManageInvoice from '../templates/ManageInvoice';
+
+import styles from './InvoiceToolbar.module.scss';
 
 const customStyles = {
   content: {
@@ -24,9 +17,8 @@ const customStyles = {
     left: '72px',
     right: 'auto',
     bottom: 'auto',
-    width: '700px'
-    // marginRight: '-50%'
-    // transform: 'translate(-50%, -50%)'
+    width: '700px',
+    overflow: 'auto'
   }
 };
 
@@ -38,29 +30,14 @@ const InvoiceToolbar = ({ data }) => {
   };
 
   const { width } = useWindowDimensions();
-
-  // const [showModal, setShowModal] = useState(false);
-  // const domElement = document.getElementById('modals');
   const [modalIsOpen, setIsOpen] = useState(false);
-
   const { statusId, id } = data;
 
   const editClickHandler = () => {
     setIsOpen(true);
   };
-
-  // const closeModalHandler = () => {
-  //   setShowModal(false);
-  // };
-  function openModal() {
-    setIsOpen(true);
-  }
-
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00';
   }
-
   function closeModal() {
     setIsOpen(false);
   }
@@ -107,9 +84,8 @@ const InvoiceToolbar = ({ data }) => {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <ManageInvoice data={data} />
+        contentLabel="Invoice Modal">
+        <ManageInvoice data={data} onCloseModal={closeModal} />
       </Modal>
     </div>
   );
